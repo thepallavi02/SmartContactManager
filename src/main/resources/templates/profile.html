@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base.html::parent(~{::#content},~{::title})}" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${loggedInUser.name}+'| Profile'"></title>
+</head>
+<body>
+<div id="content" >
+
+<!--    Sidebar-->
+    <div th:if = "${loggedInUser}">
+        <div th:replace = "~{sidebar :: sidebar}"></div>
+    </div>
+
+<div class="sm:pl-64 pt-20 flex justify-center items-center">
+    <div class="text-center"></div>
+<h1> Profile here</h1>
+</div>
+
+</div>
+</body>
+</html>
